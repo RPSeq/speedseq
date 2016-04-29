@@ -1,7 +1,7 @@
 // Application includes
 #include "Genome.hh"
 
-Genome Genome::genomes[NGS] = {Genome("NCBI36"),Genome("GRCh37")};
+Genome Genome::genomes[NGS] = {Genome("NCBI36"),Genome("GRCh37"),Genome("GRCm38")};
 
 Genome::Genome(string name) : n_chr_(0)
 {
@@ -63,6 +63,31 @@ Genome::Genome(string name) : n_chr_(0)
     cnames_[21] = "22"; clens_[21] =  51304566;
     cnames_[22] =  "X"; clens_[22] = 155270560;
     cnames_[23] =  "Y"; clens_[23] =  59373566;
+  } else if (name == "mm10" || name == "grcm38") {
+    gname_       = "GRCm38";
+    other_gname_ = "mm10";
+    n_chr_      = 21;
+    cnames_[0]  =  "1"; clens_[0]  = 195471971;
+    cnames_[1]  =  "2"; clens_[1]  = 182113224;
+    cnames_[2]  =  "3"; clens_[2]  = 160039680;
+    cnames_[3]  =  "4"; clens_[3]  = 156508116;
+    cnames_[4]  =  "5"; clens_[4]  = 151834684;
+    cnames_[5]  =  "6"; clens_[5]  = 149736546;
+    cnames_[6]  =  "7"; clens_[6]  = 145441459;
+    cnames_[7]  =  "8"; clens_[7]  = 129401213;
+    cnames_[8]  =  "9"; clens_[8]  = 124595110;
+    cnames_[9]  = "10"; clens_[9]  = 130694993;
+    cnames_[10] = "11"; clens_[10] = 122082543;
+    cnames_[11] = "12"; clens_[11] = 120129022;
+    cnames_[12] = "13"; clens_[12] = 120421639;
+    cnames_[13] = "14"; clens_[13] = 124902244;
+    cnames_[14] = "15"; clens_[14] = 104043685;
+    cnames_[15] = "16"; clens_[15] = 98207768;
+    cnames_[16] = "17"; clens_[16] = 94987271;
+    cnames_[17] = "18"; clens_[17] = 90702639;
+    cnames_[18] = "19"; clens_[18] = 61431566;
+    cnames_[19] =  "X"; clens_[19] = 171031299;
+    cnames_[20] =  "Y"; clens_[20] = 91744698;
   } else {
     cerr<<"Unknown genome '"<<org_name<<"'."<<endl;
   }

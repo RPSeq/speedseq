@@ -44,7 +44,7 @@ int main(int argc,char *argv[])
   usage += argv[0];
   usage += " -pe   file1.bam ... -qual val(20) -over val(0.8) [-f file]\n";
   usage += "\n";
-  usage += "Valid genomes (-genome option) are: NCBI36, hg18, GRCh37, hg19\n";
+  usage += "Valid genomes (-genome option) are: NCBI36, hg18, GRCh37, hg19, GRCm38, mm10\n";
 
   if (argc < 2) {
     cerr<<"Not enough parameters."<<endl;
